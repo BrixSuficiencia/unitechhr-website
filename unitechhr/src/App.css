@@ -1,0 +1,316 @@
+/* Login CSS */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  position: absolute;
+  right: 10%;
+  top: 40%;
+  transform: translateY(-50%);
+  padding: 20px;
+  width: 300px;
+}
+
+.unitech-logo {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Input field styling */
+input[type="username"],
+input[type="password"],
+input[type="text"] {
+  width: 120%;
+  margin-left: -10%; 
+  height: 65px;
+  padding: 10px;
+  padding-left: 80px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styling */
+.input-container img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px; /* Adjust the icon size */
+  height: 24px;
+}
+
+.reveal-button {
+  width: 30%;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #F3D0D7;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  width: 50%;
+  height: 65px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #F7F8FA;
+}
+
+/* General CSS */
+/* Container */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrollbars from appearing */
+  padding: 0 20px;
+  width: calc(100% - 15%); /* Adjust width to account for padding */
+  margin: 0; /* Reset margin */
+  margin-top: 150px;
+  transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+}
+
+.container.sidebar-open {
+  margin-left: 250px; /* Shift content to make room for the sidebar */
+}
+
+/* Reset margin and padding for body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 3px solid black;
+  padding: var(--header-padding, 0 10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+/* Logo */
+.logo {
+  height: 135px;
+  margin-right: var(--logo-margin-right, 50px);
+}
+
+/* Collapse Button */
+.collapse-button {
+  background: none;
+  color: #0B0C63;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: var(--collapse-margin-right, 100px);
+  padding: 0;
+}
+
+/* Search Bar Container */
+.search-bar-container {
+  position: relative;
+  max-width: var(--search-bar-max-width, 600px); /* Max width for the container */
+  width: 100%;
+  margin-right: var(--search-margin-right, 800px);
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding-left: 50px;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  left: -15px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  color: #0B0C63;
+}
+
+/* Notification Button */
+.notification-button {
+  background: none;
+  color: #0B0C63;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: var(--notification-margin-right, 30px); 
+  padding: 0;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: var(--profile-pic-margin-right, 20px);
+}
+
+/* Profile Name */
+.profile-name {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 24px;
+  font-weight: 600; /* Semibold */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 135px; /* Below the header */
+  left: -250px; /* Hide sidebar off-screen */
+  width: 250px;
+  height: calc(100% - 135px); /* Full height minus header height */
+  background-color: #ffffff;
+  color: #F7F8FA;
+  transition: left 0.3s ease; /* Smooth transition for opening/closing */
+  padding-top: 2px; /* Space for sidebar items */
+  z-index: 1000; /* Ensure it stays below the header */
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2); /* Shadow to the right of the sidebar */
+}
+
+.sidebar.open {
+  left: 0; /* Show sidebar when open */
+}
+
+/* Sidebar Items */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 5px 20px;
+}
+
+.sidebar a {
+  color: #0B0C63;
+  text-decoration: none;
+  font-family: 'Urbanist', sans-serif; /* Ensure Urbanist font is imported */
+  font-size: 24px;
+  font-weight: 600; /* Semibold */
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sidebar a:hover {
+  background-color: #F7F8FA; /* Darker background on hover */
+  padding-left: 10px;
+}
+
+/* Content */
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 150px; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.container.sidebar-open .dashboard-content {
+  margin-left: 250px; /* Shift content to the right when the sidebar is open */
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Page Header Container */
+.page-header-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #ffffff; 
+  border-bottom: 1px solid #dcdcdc; 
+  padding: 10px 20px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 15%);
+  position: fixed;
+  z-index: 1000; 
+  box-sizing: border-box;
+}
+
+.page-header-container.sidebar-open {
+  margin-left: 250px; /* Shift header when sidebar is open */
+}
+
+/* Page Header Left */
+.page-header-left {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.home-icon {
+  font-size: 24px;
+  color: #0B0C63;
+  margin-right: 10px; 
+}
+
+/* Page Title Text */
+.page-title-text {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6C6B6B;
+  padding-left: 100px;
+}
+
+/* Page Header Center */
+.page-header-center {
+  flex: 1; /* Take up remaining space */
+  text-align: center; /* Center text */
+}
+
+.page-header-title {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 24px;
+  font-weight: 600; /* Semibold weight */
+  color: #000000;
+}
+
+
+
+
+
+
