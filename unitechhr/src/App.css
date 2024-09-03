@@ -78,7 +78,8 @@ input[type="text"] {
 }
 
 button:hover {
-  background-color: #F7F8FA;
+  background-color: #0B0C63;
+  color: white;
 }
 
 /* General CSS */
@@ -137,6 +138,11 @@ body, html {
   padding: 0;
 }
 
+.collapse-button:hover {
+  background-color: white;
+  color: #070841;
+}
+
 /* Search Bar Container */
 .search-bar-container {
   position: relative;
@@ -176,6 +182,11 @@ body, html {
   cursor: pointer;
   margin-right: var(--notification-margin-right, 30px); 
   padding: 0;
+}
+
+.notification-button:hover {
+  background-color: white;
+  color: #070841;
 }
 
 /* Profile Picture */
@@ -271,6 +282,10 @@ body {
   box-sizing: border-box;
 }
 
+.page-header-left {
+  padding-left: 20px;
+}
+
 .page-header-container.sidebar-open {
   margin-left: 250px; /* Shift header when sidebar is open */
 }
@@ -307,6 +322,53 @@ body {
   font-size: 24px;
   font-weight: 600; /* Semibold weight */
   color: #000000;
+}
+
+
+/* Notifications drop menu */
+.notification-container {
+  position: relative;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.notification-list {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.notification-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.view-all-link {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #2B7EDE;
+  color: white;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+}
+
+.view-all-link:hover {
+  background-color: #1a5bb8;
 }
 
 
