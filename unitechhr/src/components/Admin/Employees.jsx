@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Layout from './Layout';
+import Layout from './AdminLayout';
 import { FaSearch, FaFileExport, FaEllipsisV, FaHome } from 'react-icons/fa';
-import '../PageCSS/Employees.css';
+import '../../PageCSS/Admin.css';
 
 const Employees = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -60,9 +60,9 @@ const Employees = () => {
       <div className="table-container">
         <button className="delete-selected-button">DELETE</button>
 
-        <table className="employee-table">
+        <table className="general-table">
           <thead>
-            <tr className="table-header-employees">
+            <tr className="table-header">
               <th>
                 <input
                   type="checkbox"

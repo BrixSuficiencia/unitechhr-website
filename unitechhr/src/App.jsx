@@ -1,21 +1,33 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import Applicants from './components/Applicants';
-import Employees from './components/Employees';
-import Jobs from './components/Jobs';
-import Careers from './components/Careers';
+/* Admin Pages */
+import AdminLogin from './components/Admin/Login';
+import AdminDashboard from './components/Admin/Dashboard';
+import AdminNotifications from './components/Admin/Notifications';
+import AdminApplicants from './components/Admin/Applicants';
+import AdminEmployees from './components/Admin/Employees';
+import AdminJobs from './components/Admin/Jobs';
+import AdminCareers from './components/Admin/Careers';
+/* Developer Pages */
+import DevLogin from './components/Developer/Login';
+import DevDashboard from './components/Developer/Dashboard';
+import DevNotifications from './components/Developer/Notifications';
+import DevUniversities from './components/Developer/Universities';
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/Applicants" element={<Applicants />} />
-        <Route path="/Employees" element={<Employees />} />
-        <Route path="/Jobs" element={<Jobs />} />
-        <Route path="/Careers" element={<Careers />} />
+        <Route path="/" element={<AdminLogin />} />
+        <Route path="/Admin/Dashboard" element={<AdminDashboard />} />
+        <Route path="/Admin/Notifications" element={<AdminNotifications />} />
+        <Route path="/Admin/Applicants" element={<AdminApplicants />} />
+        <Route path="/Admin/Employees" element={<AdminEmployees />} />
+        <Route path="/Admin/Jobs" element={<AdminJobs />} />
+        <Route path="/Admin/Careers" element={<AdminCareers />} />
+        <Route path="/Developer" element={<DevLogin />} />
+        <Route path="/Developer/Dashboard" element={<DevDashboard />} />
+        <Route path="/Developer/Notifications" element={<DevNotifications />} />
+        <Route path="/Developer/Universities" element={<DevUniversities />} />
       </Routes>
     </Router>
   );

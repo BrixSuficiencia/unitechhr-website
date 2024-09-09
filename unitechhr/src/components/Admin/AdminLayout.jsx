@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'; 
-import UnitechLogo from '../images/UNITECH_Logo.png';
-import ProfilePic from '../images/Profile.png';
+import UnitechLogo from '../../images/UNITECH_Logo.png';
+import ProfilePic from '../../images/Profile.png';
 import { FaBell, FaBars, FaSearch } from 'react-icons/fa';
 
 const Layout = ({ children }) => {
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
   return (
     <div className={`container ${isNavOpen ? 'sidebar-open' : ''}`}>
       <header className="header">
-        <Link to="/dashboard">
+        <Link to="/Admin/Dashboard">
           <img src={UnitechLogo} alt="UNITECH Logo" className="logo" />
         </Link>
         <button className="collapse-button" onClick={handleNavToggle}>
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
                 <li className="notification-item">Notification 3</li>
                 <li className="notification-item">Notification 4</li>
               </ul>
-              <Link to="/notifications" className="view-all-link">
+              <Link to="/Admin/Notifications" className="view-all-link">
                 View All Notifications
               </Link>
             </div>
@@ -53,11 +53,12 @@ const Layout = ({ children }) => {
       </header>
       <nav className={`sidebar ${isNavOpen ? 'open' : ''}`}>
         <ul>
-          <li><Link to="/dashboard">Dashboard</Link></li>
-          <li><Link to="/applicants">Applicants</Link></li>
-          <li><Link to="/employees">Employees</Link></li>
-          <li><Link to="/jobs">Jobs</Link></li>
-          <li><Link to="/careers">Careers</Link></li>
+          <li><Link to="/Admin/Dashboard">Dashboard</Link></li>
+          <li><Link to="/Admin/Notifications">Notifications</Link></li>
+          <li><Link to="/Admin/Applicants">Applicants</Link></li>
+          <li><Link to="/Admin/Employees">Employees</Link></li>
+          <li><Link to="/Admin/Jobs">Jobs</Link></li>
+          <li><Link to="/Admin/Careers">Careers</Link></li>
         </ul>
       </nav>
       <div className="content">

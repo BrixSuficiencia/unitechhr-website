@@ -1,6 +1,6 @@
-import Layout from './Layout';
+import Layout from './AdminLayout';
 import { FaHome, FaUserPlus } from 'react-icons/fa';
-import '../PageCSS/Dashboard.css';
+import '../../PageCSS/Admin.css';
 
 const Dashboard = () => {
   return (

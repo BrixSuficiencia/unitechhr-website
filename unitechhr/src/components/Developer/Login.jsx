@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import '../App.css';
-import UnitechLogo from '../images/UNITECH_Logo.png'; // UniTechHR Logo
-import UserIcon from '../images/User.png'; // User Icon
-import PasswordIcon from '../images/Password.png'; // Password Icon
+import '../../App.css';
+import UnitechLogo from '../../images/UNITECH_Logo.png';
+import UserIcon from '../../images/User.png';
+import PasswordIcon from '../../images/Password.png';
 
 const Login = () => {
   const [username, setEmail] = useState('test'); // Initial value set for testing
@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleLogin = () => {
     if (username === 'test' && password === 'test') {
-      navigate('/dashboard'); // Redirect to dashboard
+      navigate('/Developer/Dashboard'); // Redirect to dashboard
     } else {
       alert('Incorrect username or password');
     }
@@ -22,9 +22,8 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      {/* Add the logo at the top */}
       <img src={UnitechLogo} alt="UNITECH Logo" className="unitech-logo" />
-      <h2>HR Login</h2>
+      <h2>Developer Login</h2>
       <div className="input-container">
         <input
           type="username"
@@ -32,7 +31,6 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Username"
         />
-        {/* User icon inside the input container */}
         <img src={UserIcon} alt="User Icon" />
       </div>
       <div className="input-container">
@@ -42,9 +40,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
-        {/* Password icon inside the input container */}
         <img src={PasswordIcon} alt="Password Icon" />
-        {/* Reveal button inside the input container */}
         <button
           className="reveal-button"
           onClick={() => setShowPassword(!showPassword)}

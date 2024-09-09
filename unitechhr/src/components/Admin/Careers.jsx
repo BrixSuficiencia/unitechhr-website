@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Layout from './Layout';
+import Layout from './AdminLayout';
 import { FaSearch, FaEllipsisV, FaHome } from 'react-icons/fa';
-import '../PageCSS/Jobs.css';
+import '../../PageCSS/Admin.css';
 
-const Jobs = () => {
+const Careers = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isAllSelected, setIsAllSelected] = useState(false);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState({});
@@ -39,16 +39,16 @@ const Jobs = () => {
       <div className="page-header-container">
         <div className="page-header-left">
           <FaHome className="home-icon" />
-          <span className="page-title-text">Home / Jobs</span>
+          <span className="page-title-text">Home / Careers</span>
         </div>
         <div className="page-header-center">
-          <span className="page-header-title">Jobs</span>
+          <span className="page-header-title">Careers</span>
         </div>
       </div>
 
       <div className="search-export-container">
         <div className="search-bar-wrapper">
-          <input type="text" className="search-bar" placeholder="Search Job" />
+          <input type="text" className="search-bar" placeholder="Search Career" />
           <FaSearch className="search-table" />
         </div>
       </div>
@@ -67,9 +67,9 @@ const Jobs = () => {
                   onChange={handleSelectAll}
                 />
               </th>
-              <th>Job Position</th>
+              <th>Career</th>
               <th>Department</th>
-              <th>Description</th>
+              <th>Filter</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
@@ -86,7 +86,7 @@ const Jobs = () => {
                 </td>
                 <td>Instructor</td>
                 <td>Computer Science</td>
-                <td>Instructor for Programming</td>
+                <td>Assistant Instructor, Programmer</td>
                 <td>Closed</td>
                 <td>
                   <button
@@ -113,4 +113,4 @@ const Jobs = () => {
   );
 };
 
-export default Jobs;
+export default Careers;

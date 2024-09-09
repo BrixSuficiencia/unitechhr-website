@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Layout from './Layout';
+import Layout from './DevLayout';
 import { FaSearch, FaEllipsisV, FaHome } from 'react-icons/fa';
-import '../PageCSS/Jobs.css';
+import '../../PageCSS/Developer.css';
 
-const Careers = () => {
+const Employees = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isAllSelected, setIsAllSelected] = useState(false);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState({});
@@ -39,16 +39,16 @@ const Careers = () => {
       <div className="page-header-container">
         <div className="page-header-left">
           <FaHome className="home-icon" />
-          <span className="page-title-text">Home / Careers</span>
+          <span className="page-title-text">Home / Universities</span>
         </div>
         <div className="page-header-center">
-          <span className="page-header-title">Careers</span>
+          <span className="page-header-title">Universities</span>
         </div>
       </div>
 
       <div className="search-export-container">
         <div className="search-bar-wrapper">
-          <input type="text" className="search-bar" placeholder="Search Career" />
+          <input type="text" className="search-bar" placeholder="Search University" />
           <FaSearch className="search-table" />
         </div>
       </div>
@@ -56,9 +56,9 @@ const Careers = () => {
       <div className="table-container">
         <button className="delete-selected-button">DELETE</button>
 
-        <table className="applicant-table">
+        <table className="general-table">
           <thead>
-            <tr className="table-header">
+            <tr className="table-header-universities">
               <th>
                 <input
                   type="checkbox"
@@ -67,9 +67,10 @@ const Careers = () => {
                   onChange={handleSelectAll}
                 />
               </th>
-              <th>Career</th>
-              <th>Department</th>
-              <th>Filter</th>
+              <th>University Name</th>
+              <th>ID</th>
+              <th>Subsciption Start</th>
+              <th>Subsciption End</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
@@ -84,10 +85,11 @@ const Careers = () => {
                     onChange={() => handleCheckboxChange(index)}
                   />
                 </td>
-                <td>Instructor</td>
-                <td>Computer Science</td>
-                <td>Assistant Instructor, Programmer</td>
-                <td>Closed</td>
+                <td>Placeholder University</td>
+                <td>2222222</td>
+                <td>07/23/2024</td>
+                <td>09/01/2025</td>
+                <td>Active</td>
                 <td>
                   <button
                     className={`action-button ${dropdownVisible[index] ? 'active' : ''}`}
@@ -113,4 +115,4 @@ const Careers = () => {
   );
 };
 
-export default Careers;
+export default Employees;

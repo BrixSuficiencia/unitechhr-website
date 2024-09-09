@@ -1,10 +1,16 @@
+/* General Styles */
+body {
+    font-family: 'Urbanist', sans-serif;
+}
+
+/* Dashboard Buttons */
 .dashboard-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
-  }
+}
   
-  .dashboard-button {
+.dashboard-button {
     flex-basis: 20%;
     width: var(--button-width, 200px); /* Adjustable width using CSS variables */
     padding: 30px;
@@ -18,55 +24,75 @@
     position: relative;
     min-width: 150px;
     max-width: 300px;
-  }
+}
   
-  .dashboard-button span {
+.dashboard-button span {
     display: block;
-  }
+}
   
-  .dashboard-button .count {
+.dashboard-button .count {
     margin-top: 10px;
     font-size: 24px;
     font-weight: bold;
-  }
+}
   
-  .dashboard-button.employees {
+.dashboard-button.employees {
     background-color: #2B7EDE;
     --button-width: 350px;
-  }
+}
   
-  .dashboard-button.job-positions {
+.dashboard-button.job-positions {
     background-color: #F8822C;
     --button-width: 350px;
-  }
+}
   
-  .dashboard-button.notifications {
+.dashboard-button.notifications {
     background-color: #FF3939;
     --button-width: 350px;
-  }
+}
   
-  .dashboard-button.add-employee {
+.dashboard-button.add-employee {
     background-color: #3EE03B;
     --button-width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .add-employee .add-icon {
+.add-employee .add-icon {
     margin-right: 8px;
     font-size: 20px;
-  }
+}
   
-  .dashboard-button:hover {
+.dashboard-button:hover {
     opacity: 0.9;
     cursor: pointer;
-  }
+}
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .dashboard-button {
       flex-basis: 100%;
       margin: 10px 0;
     }
-  }
+ }
   
+
+/* Buttons */
+.export-button {
+    background-color: #3EE03B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Urbanist', sans-serif;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.export-icon {
+    margin-right: 8px;
+    font-size: 24px;
+}

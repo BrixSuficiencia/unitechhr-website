@@ -1,0 +1,12 @@
+.table-header-universities th {
+    padding: 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.table-header-universities {
+    background-color: #0B0C63;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
